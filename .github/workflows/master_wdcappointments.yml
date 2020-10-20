@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'wdcappointments'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_4d25716cb540411d866111db68b4a296 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_15d4d5e2245549e8a6f2af9c66d9688d }}
         package: .
