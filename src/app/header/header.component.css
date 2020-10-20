@@ -1,0 +1,11 @@
+.responsive {
+    width: 200px;
+    height: 100px;
+    
+    float: right;
+  }
+  .flex-item-right {
+    flex-basis: auto;
+    flex: 50%;
+    
+  }

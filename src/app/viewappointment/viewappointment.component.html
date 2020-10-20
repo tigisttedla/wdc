@@ -1,0 +1,167 @@
+<mat-form-field>
+  <input matInput (keyup)= "applyFilter($event.target.value)"placeholder="Search">
+</mat-form-field>
+<div class="table-responsive">
+<table mat-table [dataSource]="dataSource" class="mat-table">
+  
+  
+    <ng-container matColumnDef="FirstName">
+        <th mat-header-cell *matHeaderCellDef> First Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.FirstName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="MiddleName">
+        <th mat-header-cell *matHeaderCellDef> Middle Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.MiddleName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="LastName">
+        <th mat-header-cell *matHeaderCellDef> Last Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.LastName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Sex">
+        <th mat-header-cell *matHeaderCellDef> Sex </th>
+        <td mat-cell *matCellDef="let element"> {{element.Sex}} </td>
+      </ng-container>
+      <ng-container matColumnDef="BirthDate">
+        <th mat-header-cell *matHeaderCellDef> Birth Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.BirthDate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="EmailAddress">
+        <th mat-header-cell *matHeaderCellDef> Email Address </th>
+        <td mat-cell *matCellDef="let element"> {{element.EmailAddress}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Nationality">
+        <th mat-header-cell *matHeaderCellDef> Nationality </th>
+        <td mat-cell *matCellDef="let element"> {{element.Nationality}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Region">
+        <th mat-header-cell *matHeaderCellDef> Region </th>
+        <td mat-cell *matCellDef="let element"> {{element.Region}} </td>
+      </ng-container>
+      <ng-container matColumnDef="City">
+        <th mat-header-cell *matHeaderCellDef> City </th>
+        <td mat-cell *matCellDef="let element"> {{element.City}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Subcity">
+        <th mat-header-cell *matHeaderCellDef> Subcity </th>
+        <td mat-cell *matCellDef="let element"> {{element.Subcity}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Woreda">
+        <th mat-header-cell *matHeaderCellDef> Woreda </th>
+        <td mat-cell *matCellDef="let element"> {{element.Woreda}} </td>
+      </ng-container>
+      <ng-container matColumnDef="MobileNumber">
+        <th mat-header-cell *matHeaderCellDef> Mobile Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.MobileNumber}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TestCenter">
+        <th mat-header-cell *matHeaderCellDef> Test Center </th>
+        <td mat-cell *matCellDef="let element"> {{element.TestCenter}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TestReason">
+        <th mat-header-cell *matHeaderCellDef> Test Reason </th>
+        <td mat-cell *matCellDef="let element"> {{element.TestReason}} </td>
+      </ng-container>
+      <ng-container matColumnDef="PaymentMethod">
+        <th mat-header-cell *matHeaderCellDef> Payment Method </th>
+        <td mat-cell *matCellDef="let element"> {{element.PaymentMethod}} </td>
+      </ng-container>
+      <ng-container matColumnDef="PassportNumber">
+        <th mat-header-cell *matHeaderCellDef> Passport Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.PassportNumber}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Passportexdate">
+        <th mat-header-cell *matHeaderCellDef> Passport exdate </th>
+        <td mat-cell *matCellDef="let element"> {{element.Passportexdate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TravelDate">
+        <th mat-header-cell *matHeaderCellDef> Travel Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.TravelDate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TicketNumber">
+        <th mat-header-cell *matHeaderCellDef> Ticket Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.TicketNumber}} </td>
+      </ng-container>
+      <ng-container matColumnDef="DestinationCountry">
+        <th mat-header-cell *matHeaderCellDef> Destination Country </th>
+        <td mat-cell *matCellDef="let element"> {{element.DestinationCountry}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TestDate">
+        <th mat-header-cell *matHeaderCellDef> Test Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.TestDate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TestTime">
+        <th mat-header-cell *matHeaderCellDef> Test Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.TestTime}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Remark">
+        <th mat-header-cell *matHeaderCellDef> Remark </th>
+        <td mat-cell *matCellDef="let element"> {{element.Remark}} </td>
+      </ng-container>
+      <ng-container matColumnDef="PatientId">
+        <th mat-header-cell *matHeaderCellDef> PatientId </th>
+        <td mat-cell *matCellDef="let element"> {{element.PatientId}} </td>
+      </ng-container>
+      <ng-container matColumnDef="SpecimenId">
+        <th mat-header-cell *matHeaderCellDef> SpecimenId </th>
+        <td mat-cell *matCellDef="let element"> {{element.SpecimenId}} </td>
+      </ng-container>
+      <ng-container matColumnDef="CollectionDate">
+        <th mat-header-cell *matHeaderCellDef> CollectionDate </th>
+        <td mat-cell *matCellDef="let element"> {{element.CollectionDate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="CollectionSite">
+        <th mat-header-cell *matHeaderCellDef> CollectionSite </th>
+        <td mat-cell *matCellDef="let element"> {{element.CollectionSite}} </td>
+      </ng-container>
+      <ng-container matColumnDef="SpecimenType">
+        <th mat-header-cell *matHeaderCellDef> SpecimenType </th>
+        <td mat-cell *matCellDef="let element"> {{element.SpecimenType}} </td>
+      </ng-container>
+      <ng-container matColumnDef="RequestedBy">
+        <th mat-header-cell *matHeaderCellDef> RequestedBy </th>
+        <td mat-cell *matCellDef="let element"> {{element.RequestedBy}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TestMethod">
+        <th mat-header-cell *matHeaderCellDef> TestMethod </th>
+        <td mat-cell *matCellDef="let element"> {{element.TestMethod}} </td>
+      </ng-container>
+      <ng-container matColumnDef="RequestedTest">
+        <th mat-header-cell *matHeaderCellDef> RequestedTest </th>
+        <td mat-cell *matCellDef="let element"> {{element.RequestedTest}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Result">
+        <th mat-header-cell *matHeaderCellDef> Result </th>
+        <td mat-cell *matCellDef="let element"> {{element.Result}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TestPerformedBy">
+        <th mat-header-cell *matHeaderCellDef> TestPerformedBy </th>
+        <td mat-cell *matCellDef="let element"> {{element.TestPerformedBy}} </td>
+      </ng-container>
+      <ng-container matColumnDef="ResultViewedBy">
+        <th mat-header-cell *matHeaderCellDef> ResultViewedBy </th>
+        <td mat-cell *matCellDef="let element"> {{element.ResultViewedBy}} </td>
+      </ng-container>
+      <ng-container matColumnDef="ResultDate">
+        <th mat-header-cell *matHeaderCellDef> ResultDate </th>
+        <td mat-cell *matCellDef="let element"> {{element.ResultDate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="ReportAuthorizedBy">
+        <th mat-header-cell *matHeaderCellDef> ReportAuthorizedBy </th>
+        <td mat-cell *matCellDef="let element"> {{element.ReportAuthorizedBy}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element"> 
+          <button (click)= updateApt(element) mat-raised-button color="warn"><b>Edit</b></button>
+          <button (click)= PrintResult(element) mat-raised-button color="warn"><b>Print</b></button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+</div>

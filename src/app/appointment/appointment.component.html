@@ -1,0 +1,216 @@
+
+     <mat-card>
+        <span>Covid 19 Test Appointment Form</span>
+        
+        <form [formGroup]="aptform"class="new-medicine-form" (ngSubmit)= "onSubmit()">
+    <div fxLayout="row" fxLayout.sm="column"  fxLayout.xs="column">
+                <div  fxFlex>   
+            <mat-form-field class="new-medicine-field">
+             <input matInput placeholder="FirstName"formControlName="FirstName"> 
+            </mat-form-field>
+    </div>
+    <div  fxFlex>   
+      <mat-form-field class="new-medicine-field">
+                <input matInput placeholder="Middle Name"formControlName="MiddleName"> 
+            </mat-form-field>
+               </div>
+    <div  fxFlex> 
+      <mat-form-field class="new-medicine-field">
+           <input matInput placeholder="Last Name"formControlName="LastName"> 
+          </mat-form-field>
+         </div>
+    </div>
+    <div fxLayout="row" fxLayout.sm="column"  fxLayout.xs="column">
+      <div  fxFlex> 
+        <mat-form-field class="new-medicine-field">
+            <mat-select placeholder="Sex"formControlName="Sex">
+              <mat-option *ngFor="let Sex of Sexs" [value]="Sex.value">
+                {{Sex.viewvalue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+         </div>
+         <div  fxFlex> 
+          <mat-form-field class="new-medicine-field">
+              
+              <input matInput [matDatepicker]="picker" placeholder="Birth Date"formControlName="BirthDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+</div>  
+<div  fxFlex> 
+  <mat-form-field class="new-medicine-field">
+      <input matInput placeholder="Email Address"formControlName="EmailAddress"> 
+  </mat-form-field>
+</div>       
+    </div> 
+    <div fxLayout="row" fxLayout.sm="column"  fxLayout.xs="column">
+      <div  fxFlex> 
+        <mat-form-field class="new-medicine-field">
+            <mat-select placeholder="Nationality"formControlName="Nationality">
+              <mat-option *ngFor="let Nationality of Nationalities" [value]="Nationality.value">
+                {{Nationality.viewvalue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+</div>
+<div  fxFlex> 
+  <mat-form-field class="new-medicine-field">
+      <input matInput placeholder="Region"formControlName="Region"> 
+  </mat-form-field>
+</div>
+<div  fxFlex> 
+  <mat-form-field class="new-medicine-field">
+      <input matInput placeholder="City"formControlName="City"> 
+  </mat-form-field>
+</div>
+</div>
+
+<div fxLayout="row" fxLayout.sm="column"  fxLayout.xs="column">
+    <div  fxFlex> 
+        <mat-form-field class="new-medicine-field">
+            <input matInput placeholder="Woreda"formControlName="Woreda"> 
+        </mat-form-field>
+   </div>
+<div  fxFlex> 
+    <mat-form-field class="new-medicine-field">
+        <input matInput placeholder="Sub City"formControlName="SubCity"> 
+    </mat-form-field>
+</div>
+
+<div  fxFlex> 
+<mat-form-field class="new-medicine-field">
+  <input matInput placeholder="Mobile Number"formControlName="MobileNumber"> 
+</mat-form-field>
+</div>
+</div>
+<div fxLayout="row" fxLayout.sm="column"  fxLayout.xs="column">                
+<div  fxFlex>   
+  <mat-form-field class="new-medicine-field">
+    <mat-select placeholder="Test Center"formControlName="TestCenter">
+      <mat-option *ngFor="let TestCenter of TestCenters" [value]="TestCenter.value">
+        {{TestCenter.viewvalue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div> 
+         
+    <div  fxFlex> 
+               <mat-form-field class="new-medicine-field">
+                <mat-select placeholder="Payment Method"formControlName="PaymentMethod">
+                    <mat-option *ngFor="let PaymentMethod of PaymentMethods" [value]="PaymentMethod.value">
+                      {{PaymentMethod.viewvalue}}
+                    </mat-option>
+                  </mat-select>
+               </mat-form-field>
+                  </div>
+     
+     <div  fxFlex>  
+      <mat-form-field class="new-medicine-field">
+          <mat-select placeholder="Test Reason"formControlName="TestReason">
+            <mat-option *ngFor="let Reason of Reasons" [value]="Reason.value">
+              {{Reason.viewvalue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+</div>      
+</div>  
+     <div fxLayout="row" fxLayout.sm="column"  fxLayout.xs="column">
+                   
+                <div  fxFlex> 
+                    <span>For Travelers only</span>
+     <mat-form-field class="new-medicine-field">
+                <input matInput placeholder="Passport Number"formControlName="PassportNumber"> 
+            </mat-form-field>
+        </div>
+        
+        <div  fxFlex> 
+          
+    <mat-form-field class="new-medicine-field">
+                    <input matInput [matDatepicker]="picker12" placeholder="Passport Expiary Date"formControlName="PassportExpiaryDate"> 
+                    <mat-datepicker-toggle matSuffix [for]="picker12"></mat-datepicker-toggle>
+                    <mat-datepicker #picker12></mat-datepicker>
+                </mat-form-field>
+            </div>
+               
+          
+          <div  fxFlex> 
+            <mat-form-field class="new-medicine-field">
+                        <input matInput [matDatepicker]="picker1" placeholder="Travel Date"formControlName="TravelDate"> 
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                </div>
+    </div>
+    
+    <div fxLayout="row" fxLayout.sm="column"  fxLayout.xs="column">
+      <div  fxFlex> 
+        <mat-form-field class="new-medicine-field">
+                    <input matInput placeholder="Ticket Number"formControlName="TicketNumber"> 
+                </mat-form-field>
+            </div>
+        
+      <div  fxFlex> 
+        <mat-form-field class="new-medicine-field">
+            <mat-select placeholder="Destination Country"formControlName="DestinationCountry">
+              <mat-option *ngFor="let Destination of Destinations" [value]="Destination.value">
+                {{Destination.viewvalue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+</div> 
+<div  fxFlex> 
+  <span>Click on travel if testing for tarvel</span>
+  <mat-radio-group aria-label="Select Test Reason">
+    <mat-radio-button value="1">Trave</mat-radio-button>
+    <mat-radio-button value="2">Check Up</mat-radio-button>
+  </mat-radio-group>
+</div>      
+</div>
+               
+<div fxLayout="row" fxLayout.sm="column"  fxLayout.xs="column">      
+   
+    <div  fxFlex>   
+        <span>Please pick test Date and Time</span> 
+        
+
+          <mat-form-field class="new-medicine-field">
+            <input matInput [matDatepicker]="picker13" placeholder="TestDate"formControlName="TestDate"> 
+            <mat-datepicker-toggle matSuffix [for]="picker13"></mat-datepicker-toggle>
+            <mat-datepicker #picker13></mat-datepicker>
+        </mat-form-field>
+            
+             
+    </div>
+    
+    <div  fxFlex > 
+        
+        <input [ngxTimepicker]="toggleTimepicker" [disableClick]="true" readonly placeholder="TestTime"formControlName="TestTime">
+            <ngx-material-timepicker-toggle [for]="toggleTimepicker"></ngx-material-timepicker-toggle>
+            <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>
+        
+         </div>
+        
+          <div  fxFlex> 
+            <mat-form-field class="new-medicine-field"> 
+                 <textarea matInput placeholder="Remark"formControlName="Remark"></textarea>
+             </mat-form-field>
+         </div>
+         </div>
+     
+<div>
+      <button mat-raised-button class="new-form-btn">Submit</button>
+      <button mat-raised-button class="new-form-btn"(click)=generatePDF()>Cancel</button>
+      
+    </div>    
+        </form>
+        <div class="control-section">
+          <div class="col-lg-9 content-wrapper">
+              <ejs-schedule #scheduleObj width='100%' height='330px' [selectedDate]="selectedDate"  [(currentView)]="currentView"
+              (eventRendered)="oneventRendered($event)" >
+              </ejs-schedule>
+          </div>
+        </div>
+    </mat-card>
+    
+

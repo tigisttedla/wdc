@@ -1,0 +1,77 @@
+<h2 mat-dialog-title>Update Appointment </h2>
+<mat-dialog-content [formGroup]="form">
+     
+    <mat-form-field class="new-medicine-field">
+     <input matInput placeholder="FirstName"formControlName="FirstName"> 
+    </mat-form-field>
+  <br>
+<mat-form-field class="new-medicine-field">
+        <input matInput placeholder="Middle Name"formControlName="MiddleName"> 
+    </mat-form-field>
+    <br>  
+<mat-form-field class="new-medicine-field">
+   <input matInput placeholder="Last Name"formControlName="LastName"> 
+  </mat-form-field>
+  <br> 
+  
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="PatientId"formControlName="PatientId"> 
+ </mat-form-field>
+<br>
+<mat-form-field class="new-medicine-field">
+  <input matInput placeholder="SpecimenId"formControlName="SpecimenId"> 
+ </mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput [matDatepicker]="picker12" placeholder="CollectionDate"formControlName="CollectionDate"> 
+  <mat-datepicker-toggle matSuffix [for]="picker12"></mat-datepicker-toggle>
+  <mat-datepicker #picker12></mat-datepicker>
+</mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="CollectionSite"formControlName="CollectionSite"> 
+ </mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="SpecimenType"formControlName="SpecimenType"> 
+ </mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="RequestedBy"formControlName="RequestedBy"> 
+ </mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="TestMethod"formControlName="TestMethod"> 
+ </mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="RequestedTest"formControlName="RequestedTest"> 
+ </mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="Result"formControlName="Result"> 
+ </mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="TestPerformedBy"formControlName="TestPerformedBy"> 
+ </mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="ResultViewedBy"formControlName="ResultViewedBy"> 
+ </mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput [matDatepicker]="picker13" placeholder="ResultDate"formControlName="ResultDate"> 
+  <mat-datepicker-toggle matSuffix [for]="picker13"></mat-datepicker-toggle>
+  <mat-datepicker #picker13></mat-datepicker>
+</mat-form-field>
+ <br>
+ <mat-form-field class="new-medicine-field">
+  <input matInput placeholder="ReportAuthorizedBy"formControlName="ReportAuthorizedBy"> 
+ </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+<button mat-raised-button color="warn"(click)=Save()>Save</button>
+<button mat-raised-button color="warn"(click)=Close()>Close</button>
+
+</mat-dialog-actions>
